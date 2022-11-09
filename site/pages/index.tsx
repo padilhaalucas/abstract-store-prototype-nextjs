@@ -24,6 +24,8 @@ export async function getStaticProps({
   const { pages } = await pagesPromise
   const { categories, brands } = await siteInfoPromise
 
+  console.log(process.env.NEXT_PUBLIC_CT_PROJECT_KEY, 'ENV')
+
   return {
     props: {
       products,
